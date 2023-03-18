@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd template</title>
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+}
+#screen{
+width:100%;
+background-color: black;
+}
+.main{
+    position: relative; 
+    /* height: 4000px; */
+    width: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.main::before{
+    content: "";
+      background-image: url(https://images.unsplash.com/photo-1609179548370-a5ee66e7a69e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3RhbmRpbmclMjBvbiUyMGElMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80);
+      background-size: 100% 940px ;
+      background-repeat: repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+}
+.sidebar{
+    width:22%;
+    /* border:2px solid white; */
+    height:940px;
+    background-color:rgb(164,62,76);
+    position: relative;
+}
+.about{
+    width:65%;
+    /* border:2px solid white; */
+}
+#image {
+    height:330px;
+    width:100%;
+    /* border:2px solid white; */
+}
+#image > img{
+    height:150px;
+    width:150px;
+    border-radius: 100px;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-bottom: 35px;
+}
+#image > h1,p{
+    color: white;
+    text-align: center;
+}
+#session{
+    width:99.90%;
+    height:300px;
+    /* border:2px solid black; */
+}
+#session > div{
+height:50px;
+width:99%;
+border:1px solid rgb(164,62,76);
+color:white;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+border-bottom: 4px solid white;
+}
+#session > div > p{
+    margin-top:15px;
+}
+#session >div:nth-child(1){
+    background-color: white;
+    color:rgb(160,120,122);
+}
+#session >div:nth-child(1) >p{
+    color:rgb(160,120,122);
+}
+#icons{
+    height:30px;
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+#icons > div {
+    text-align: center;
+}
+#icons > div >i{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(195, 116, 116);
+    margin-left: 10px;
+    width:30px;
+    height:25px;
+    padding-top: 8px;
+}
+#navend{
+    margin-top:110px;
+}
+#aboutinfo{
+    height:940px;
+    width:100%;
+    /* border:2px solid yellow; */
+}
+#abouthead{
+     height:100px; 
+     width:100%;
+    /* border:1px solid green;  */
+     margin-top: 50px;
+     text-align: center;
+}
+#abouthead >div{
+    height:2px;
+    width:40px;
+    background-color:red;
+    margin-left: 380px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+#abouthead>h1{
+    color:white;
+    margin-bottom: 10px;
+}
+#info1{
+    height:390px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(43, 43, 43);
+}
+#info1 >div{
+    width:48%;
+    height: 70%;
+}
+#info1 >div:nth-child(1) >img{
+    width:100%;
+    height:95%;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+#info1 >div:nth-child(2)>h1{
+    color:white;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+#info1 >div:nth-child(2)>p{
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+#info1 >div:nth-child(2)>button{
+height:40px;
+width:120px;
+color:rgb(177, 94, 98);
+font-weight: bold;
+}
+#info2{
+    height:390px;
+    width:100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid rgb(43, 43, 43);
+}
+#info2 >div{
+    width:48%;
+    height: 70%;
+}
+#info2 >div:nth-child(2) >img{
+    width:100%;
+    height:100%;
+    border-radius: 5px;
+    margin-top:60px;
+}
+#info2 >div:nth-child(1)>h1{
+    color:white;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+#info2 >div:nth-child(1)>p{
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+#info2 >div:nth-child(1)>button{
+height:40px;
+width:120px;
+color:rgb(177, 94, 98);
+font-weight: bold;
+}
+#good{
+    height:940px;
+    width:100%;
+    /* border:1px solid white; */
+    border-bottom: 5px solid rgb(43, 43, 43);
+}
+#goodhead{
+    width:100%;
+    height:100px;
+    text-align: center;
+    /* border:2px solid red; */
+    margin-top: 20px;
+}
+#goodhead > h1{
+    color:white;
+    margin-bottom: 10px;
+}
+#goodhead >div{
+    height:2px;
+    width:40px;
+    background-color:red;
+    margin-left: 380px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+#goodinfo{
+    width:100%;
+    height:600px;
+    /* border:4px solid green; */
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 95px;
+}
+#goodinfo > div{
+    width:49.10%;
+    height:48%;
+    /* margin-bottom: 15px; */
+    /* border:3px solid red; */
+    background-color: rgb(47, 45, 45);
+}
+#goodinfo > div >div {
+    height:60px;
+    width:60px;
+    border:4px solid white;
+    border-radius: 50px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+#goodinfo >div:nth-child(1)>div>i{
+    color:white;
+    font-size: 35px;
+    margin-left: 18px;
+    margin-top: 13px;
+}
+#goodinfo >div:nth-child(2)>div>i{
+    color:white;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+#goodinfo >div:nth-child(3)>div>i{
+    color:white;
+    font-size: 35px;
+    margin-left: 14px;
+    margin-top: 13px;
+}
+#goodinfo >div:nth-child(4)>div>i{
+    color:white;
+    font-size: 35px;
+    margin-left: 15px;
+    margin-top: 13px;
+}
+#goodinfo > div >h1{
+    color:white;
+    font-size: 28px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#goodinfo > div >p{
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: left;
+}
+#work{
+    height:1300px;
+    width:100%;
+    /* border:1px solid white; */
+    border-bottom: 5px solid rgb(43, 43, 43);
+}
+#workinfo{
+    width:100%;
+    height:100px;
+    text-align: center;
+    /* border:2px solid red; */
+    margin-top: 20px;
+}
+#workinfo > h1{
+    color:white;
+    margin-bottom: 10px;
+}
+#workinfo >div:nth-child(2){
+    height:2px;
+    width:40px;
+    background-color:red;
+    margin-left: 380px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+#worksections{
+    height:20px;
+    width:250px;
+    /* border:2px solid green; */
+    margin-left: 250px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#worksections >div{
+    /* width:50px; */
+    color:white;
+    font-weight: bold;
+    /* font-size: 18px; */
+}
+#worksections >div:nth-child(1){
+    color:red;
+}
+#workimage{
+width:100%;
+height:1050px;
+/* border:2px solid blue; */
+display:flex;
+justify-content: space-between;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+#workimage > div {
+    width:48%;
+    height:300px;
+    /* border:3px solid red; */
+    border-radius: 10px;
+    margin-top: 0px;
+}
+#workimage > div >hr{
+    font-size: 5px;
+    opacity: 0.2;
+}
+#workimage > div >img{
+    width:100%;
+    height:100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#contact{
+    /* height:940px; */
+    width:100%;
+    /* border:1px solid white; */
+    border-bottom: 5px solid rgb(43, 43, 43);
+}
+#contacthead{
+    width:100%;
+    height:100px;
+    text-align: center;
+    /* border:2px solid red; */
+    margin-top: 40px;
+}
+#contacthead > h1{
+    color:white;
+    margin-bottom: 10px;
+}
+#contacthead >div:nth-child(2){
+    height:2px;
+    width:40px;
+    background-color:red;
+    margin-left: 380px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+#contactinfo{
+    width:100%;
+    /* height:600px; */
+    /* border:2px solid red; */
+    margin-top: 50px;
+}
+#contactinfo > div:nth-child(1){
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+#contactinfo > div:nth-child(1) >div{
+    width:48%;
+    height:40px;
+    /* border:2px solid blue; */
+}
+#contactinfo > div:nth-child(1) >div >input {
+    height:39px;
+    width:95%;
+    background-color:rgb(50, 48, 48);
+    padding-left: 20px;
+    border:2px solidwhite;
+}
+#contactinfo > div:nth-child(2) >input {
+    height:40px;
+    width:98%;
+    margin-top: 30px;
+    background-color:rgb(50, 48, 48);
+    padding-left: 20px;
+    border:white;
+}
+
+#contactinfo > div:nth-child(3) >input {
+    height:100px;
+    width:98%;
+    margin-top: 30px;
+    background-color:rgb(50, 48, 48);
+    padding-left: 20px;
+    border:white;
+}
+#contactinfo >button {
+    height:40px;
+    width:18%;
+    font-size: 18px;
+    margin-left: 320px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    color:brown
+}
+</style>
+<body>
+    <div id="screen">
+        <div class="main">
+            <div class="sidebar">
+                <div id="image">
+                    <img src="https://mccblr.edu.in/wp-content/uploads/2022/07/faye-dsouza.jpg" alt="image" />
+                    <h1>Reflux Me</h1>
+                    <p>Web Developer</p>
+                </div>
+                <div id="session">
+                    <div><p>About Me</p></div>
+                    <div><p>What I'm good at</p></div>
+                    <div><p>My Work</p></div>
+                    <div><p>Contact Me</p></div>
+                </div>
+                <div id="icons">
+                    <div><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-whatsapp"></i><i class="fa-solid fa-wifi"></i></div>
+                </div>
+                <div id="copy">
+                    <p>Copyright 2019 Reflux Design</p>
+                </div>
+                <div id="navend">
+                    <p>By templatemo</p>
+                </div>
+            </div>
+            <div class="about">
+             <div id="aboutinfo">
+                <div id="abouthead">
+                    <h1>About Me</h1>
+                    <div></div>
+                    <p>This is a Bootstrap v4.2.1 CSS Template for you. Edit and use this layout for your site.Aliquam erat volupat.Nam ut nulla eu sem malesuada malesuada nec nec nibh.</p>
+                </div>
+                <div id="info1">
+                    <div>
+                        <img src="data:image/jpeg;base64,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" alt="info-1"/>
+                    </div>
+                    <div>
+                        <h1>Relux HTML CSS Template</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nesciunt fugiat. Eaque veniam vitae quasi! Harum ipsam natus, cumque ex necessitatibus cupiditate deleniti omnis, soluta est numquam tempora. Natus beatae quae neque in ex tenetur id est sequi facere aspernatur.</p>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div id="info2">
+                    <div>
+                        <h1>Sed sagittis rhoncus velit</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nesciunt fugiat. Eaque veniam vitae quasi! Harum ipsam natus, cumque ex necessitatibus cupiditate deleniti omnis, soluta est numquam tempora. Natus beatae quae neque in ex tenetur id est sequi facere aspernatur.</p>
+                        <button>READ MORE</button>
+                    </div>
+                    <div>
+                        <img src="https://media.istockphoto.com/id/897572910/photo/backpack-school.jpg?s=612x612&w=0&k=20&c=fbiNl16KgSNU9f5JnkcA0Wv_PExa0uogwd6cQgUbkPc=" alt="info-2"/>
+                    </div>
+                </div>
+             </div>
+             <div id="good">
+                <div id="goodhead">
+                    <h1>What I'm good at?</h1>
+                    <div></div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  mollitia nisi asperiores obcaecati non doloribus? mollitia nisi asperiores obcaecati non doloribus?</p>
+                </div>
+                <div id="goodinfo">
+                    <div>
+                        <div><i class="fa-regular fa-lightbulb"></i></div>
+                        <h1>HTML5 & CSS3</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit eaque beatae facere enim nulla totam voluptatibus fugiat deserunt dolores.</p>
+                    </div>
+                    <div>
+                        <div><i class="fa-solid fa-code"></i></div>
+                        <h1>Creative Ideas</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit eaque beatae facere enim nulla totam voluptatibus fugiat deserunt dolores.</p>
+                    </div>
+                    <div>
+                        <div><i class="fa-solid fa-gear"></i></div>
+                        <h1>Easy Customize</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit eaque beatae facere enim nulla totam voluptatibus fugiat deserunt dolores.</p>
+                    </div>
+                    <div>
+                        <div><i class="fa-solid fa-chart-line"></i></div>
+                        <h1>Admin Dashboard</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit eaque beatae facere enim nulla totam voluptatibus fugiat deserunt dolores.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="work">
+                <div id="workinfo">
+                    <h1>MY WORK</h1>
+                    <div></div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum tenetur distinctio omnis nisi natus placeat modi consectetur quia architecto quasi.</p>
+                </div>
+                <div id="worksections">
+                    <div><u>All</u></div>
+                    <div>People</div>
+                    <div>Nature</div>
+                    <div>Animals</div>
+                </div>
+                <div id="workimage">
+                    <div><img src="https://images.thrillophilia.com/image/upload/s--MWCBF5eR--/c_fill,g_center,h_642,q_auto,w_1280/f_auto,fl_strip_profile/v1/images/photos/000/013/603/original/1571301931_Jaisalmer.jpg.jpg" alt="image-1" /><hr/></div>
+                    <div><img src="https://www.hedrickconstructioninc.com/hubfs/green-and-white-house-in-snow.jpg" alt="img-2" />
+                        <hr/></div>
+                    <div><img src="https://cdn.pixabay.com/photo/2017/04/24/13/37/architecture-2256489__340.jpg" alt="img-3" /><hr/></div>
+                    <div><img src="https://thumbs.dreamstime.com/b/business-man-running-to-appointment-smiling-front-office-building-56447646.jpg" alt="img-4" /><hr/></div>
+                    <div><img src="https://www.maxpixel.net/static/photo/1x/Ireland-Boy-Winter-Snow-Mountain-Trees-4024310.jpg" alt="img-5" /><hr/></div>
+                    <div><img src="https://watermark.lovepik.com/photo/20211202/large/lovepik-the-boy-squatted-on-the-bow-of-the-boat-and-looked-picture_501444052.jpg" alt="img-6" /><hr/></div>
+                </div>
+            </div>
+            <div id="contact">
+                <div id="contacthead">
+                    <h1>Contact Me</h1>
+                    <div></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, suscipit libero? Amet eveniet velit cum, et beatae accusamus cupiditate dolorum.</p>
+                </div>
+                <div id="contactinfo">
+                    <div>
+                        <div><input placeholder="Your Name.." /></div>
+                        <div><input placeholder="Your Email.." /></div>
+                    </div>
+                    <div><input placeholder="Subject" /></div>
+                    <div><input placeholder="Type a message.." /></div>
+                    <button>Send Message</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
